@@ -32,7 +32,7 @@ jobs:
       contents: read
       actions: read
     steps:
-      - uses: Arggon/flakeguard-action@be074e00d5b590eded5de08eb22f77796fe0e35f
+      - uses: Arggon/flakeguard-action@ac574cdcbcf60e2aaa1f72e3cf918d5ad1bdcd86
         with:
           artifact-pattern: "junit*"
           lookback-runs: "2"
@@ -55,7 +55,7 @@ jobs:
       - name: Missing artifacts must fail loudly
         id: missing
         continue-on-error: true
-        uses: Arggon/flakeguard-action@be074e00d5b590eded5de08eb22f77796fe0e35f
+        uses: Arggon/flakeguard-action@ac574cdcbcf60e2aaa1f72e3cf918d5ad1bdcd86
         with:
           artifact-pattern: "does-not-exist-*"
       - name: Assert the action failed with a diagnostic
